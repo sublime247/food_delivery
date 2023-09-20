@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/cores/components/components.dart';
 import 'package:go_router/go_router.dart';
 
 class SplashView extends StatelessWidget {
@@ -11,6 +12,13 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return ScaffoldWidget(
+      body: Center(
+        child: Text(
+          "Splash Screen",
+          style: Theme.of(context).textTheme.bodySmall,
+        ),
+      ),
+    useSingleScroll: true);
   }
 }
