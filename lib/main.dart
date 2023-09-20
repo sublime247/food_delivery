@@ -5,7 +5,7 @@ import 'package:food_delivery/app/app.dart';
 void main() {
   runApp(
     const ProviderScope(
-      child: MyApp(),
+      child: FoodNinja(),
     ),
   );
 }

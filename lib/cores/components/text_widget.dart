@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery/cores/constants/palette.dart';
 import 'package:food_delivery/cores/constants/font_size.dart';
 
 class TextWidget extends StatelessWidget {
@@ -8,7 +7,7 @@ class TextWidget extends StatelessWidget {
     this.text, {
     Key? key,
     this.fontSize = kfsMedium,
-    this.textColor = kcWhiteColor,
+    this.textColor ,
     this.fontWeight = FontWeight.w400,
     this.textAlign = TextAlign.justify,
     this.maxLines,
@@ -61,8 +60,8 @@ class RichTextWidget extends StatelessWidget {
     Key? key,
     this.fontSize = kfsMedium,
     this.fontSize2 = kfsMedium,
-    this.textColor = kcWhiteColor,
-    this.textColor2 = kcWhiteColor,
+    this.textColor ,
+    this.textColor2 ,
     this.fontWeight = FontWeight.w400,
     this.fontWeight2 = FontWeight.w400,
     this.textAlign = TextAlign.justify,

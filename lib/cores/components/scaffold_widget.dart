@@ -47,7 +47,7 @@ class ScaffoldWidget extends StatelessWidget {
       drawerEnableOpenDragGesture: true,
       key: scaffoldKey,
       appBar: appBar,
-      backgroundColor: bg ?? kcBackground,
+      backgroundColor: bg,
       body: SafeArea(
         child: SizedBox(
           height: sh(98),
