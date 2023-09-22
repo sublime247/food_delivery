@@ -5,4 +5,8 @@ class RouteLocation {
   const RouteLocation._();
 
   static String get home => '/home';
+  static String get onboard1 => '/onboard1';
+  static String get onboard2 => '/onboard2';
+  static String get login => '/login';
+  static String get signup => '/signup';
 }
