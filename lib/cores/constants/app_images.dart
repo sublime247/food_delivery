@@ -1,7 +1,7 @@
 abstract class ImageAssets {
   static const String logo = 'assets/images/Logo.png';
-  static const String onboardIllustration = 'assets/images/illustration.png';
-  static const String onboardIllustration2 = 'assets/images/illustration2.png';
+  static const String onboardIllustration = 'assets/images/Illustration.png';
+  static const String onboardIllustration2 = 'assets/images/Illustration2.png';
   static const String galleryIcon = 'assets/icons/gallery.svg';
   static const String payoneer = 'assets/icons/payoneer.svg';
   static const String paypal = 'assets/icons/paypal.svg';

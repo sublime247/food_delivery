@@ -1,16 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_delivery/cores/components/scaffold_widget.dart';
-import 'package:go_router/go_router.dart';
+import 'package:food_delivery/cores/components/components.dart';
+import 'package:food_delivery/cores/constants/constants.dart';
+import 'package:food_delivery/cores/theme/theme.dart';
+import 'package:food_delivery/cores/utils/utils.dart';
 
 class OnboardScreen extends ConsumerStatefulWidget {
-  //  static OnboardScreen builder(
-  //   BuildContext context,
-  //   GoRouterState state,
-  //   WidgetRef ref,
-  // ) =>
-  //     const OnboardScreen();
   const OnboardScreen({super.key});
 
   @override
@@ -18,12 +13,37 @@ class OnboardScreen extends ConsumerStatefulWidget {
 }
 
 class _OnboardScreenState extends ConsumerState<OnboardScreen> {
-
   @override
   Widget build(BuildContext context) {
-    return  const ScaffoldWidget(body: 
-     Placeholder()
-
-    , useSingleScroll: false);
+    late final theme = Theme.of(context).extension<Palette>()!;
+    return ScaffoldWidget(
+      body: Column(
+        children: [
+          vSpace(kXtremeLarge),
+          Image.asset(ImageAssets.onboardIllustration),
+          vSpace(kGlobalPadding),
+          TextWidget(
+            'Find your Comfort\nFood here',
+            textAlign: TextAlign.center,
+            textColor: theme.mainTextColor,
+            fontFamily: bentonSansFont,
+            fontSize: sp(kfsSuperLarge),
+          ),
+          vSpace(kfsExtraLarge),
+          TextWidget(
+            'Here you can find a chef or dish for every\ntaste and color. Enjoy!',
+            textAlign: TextAlign.center,
+            textColor: theme.mainTextColor,
+            fontSize: sp(kfsVeryTiny),
+          ),
+          vSpace(kXtremeLarge),
+          ButtonWidget(
+            onTap: () {},
+            text: 'Next',
+          )
+        ],
+      ),
+      useSingleScroll: false,
+    );
   }
 }

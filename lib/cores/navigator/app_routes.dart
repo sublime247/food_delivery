@@ -30,7 +30,7 @@ final appRoutes = [
     
   ),
   GoRoute(
-    path: RouteLocation.signup,
+    path: RouteLocation.signUp,
     parentNavigatorKey: navigationKey,
     builder: SplashView.builder,
     
