@@ -6,6 +6,8 @@ abstract class ImageAssets {
   static const String payoneer = 'assets/icons/payoneer.svg';
   static const String paypal = 'assets/icons/paypal.svg';
   static const String visa = 'assets/icons/visa.svg';
+  static const String iceCream = 'assets/images/ice_cream.png';
+  static const String iceCream2 = 'assets/images/ice_cream2.png';
 
   // ResturantImages
   static const String veganResto = 'assets/images/vegan_resto.png';

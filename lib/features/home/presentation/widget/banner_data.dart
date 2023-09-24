@@ -1,3 +1,3 @@
 abstract class BannerText{
-  static String InfoText ='Welcome to the month of october';
+  static String InfoText ='Special Offer For \noctober';
 }
