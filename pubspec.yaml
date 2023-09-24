@@ -54,8 +54,6 @@ flutter:
     - assets/icons/
     - assets/
    
-
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -71,6 +69,9 @@ flutter:
     - family: BentonSans
       fonts:
         - asset: assets/fonts/BentonSans-Bold.otf
+    - family: Viga
+      fonts:
+        - asset: assets/fonts/Viga-Regular.otf    
   
  
   

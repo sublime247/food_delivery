@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/cores/components/components.dart';
 import 'package:food_delivery/cores/constants/app_images.dart';
+import 'package:food_delivery/cores/constants/app_strings.dart';
 import 'package:food_delivery/cores/navigator/route_location.dart';
-import 'package:food_delivery/cores/theme/app_colors.dart';
+import 'package:food_delivery/cores/theme/theme.dart';
+import 'package:food_delivery/cores/utils/utils.dart';
 import 'package:go_router/go_router.dart';
 
 class SplashView extends StatefulWidget {
@@ -18,34 +20,39 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
-
   @override
   void initState() {
-   Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       context.go(RouteLocation.onboard1);
     });
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
+    late final theme = Theme.of(context).extension<Palette>()!;
     return ScaffoldWidget(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(ImageAssets.logo, height: 200,),
-            Text(
-              "Food Ninja",
-              style: Theme.of(context).textTheme.displayLarge!.copyWith(
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold,
-                    color: AppColor.primayColor
-                  )
+            Image.asset(
+              ImageAssets.logo,
+              height: h(200),
             ),
+            TextWidget(
+              "Food Ninja",
+              textColor: theme.primaryColor,
+              fontSize: sp(40),
+              fontFamily: vigaFont,
+              fontWeight: FontWeight.w400,
+            ),
+            
           ],
         ),
       ),
-    useSingleScroll: false);
+      useSingleScroll: false,
+    );
   }
 }

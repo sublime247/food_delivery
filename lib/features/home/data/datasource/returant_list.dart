@@ -2,9 +2,9 @@ import 'package:food_delivery/cores/constants/app_images.dart';
 import 'package:food_delivery/features/home/data/model/resturant_model.dart';
 
 abstract class RestaurantListDataSource {
-  List get resturantLists => _resturantLists;
+  static List get resturantLists => _resturantLists;
   static const String resturantsTittle = ' Nearest Resturant';
-  final List<ResturantModel> _resturantLists = [
+  static final List<ResturantModel> _resturantLists = [
     const ResturantModel(
         image: ImageAssets.veganResto,
         resturantName: 'Vegan Resto',
@@ -30,4 +30,8 @@ abstract class RestaurantListDataSource {
         resturantName: 'Delight City',
         time: '12 Mins'),
   ];
+}
+
+abstract class ResturantLists extends RestaurantListDataSource {
+  ResturantLists() : super();
 }

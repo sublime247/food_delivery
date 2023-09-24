@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/cores/components/button.dart';
 import 'package:food_delivery/cores/constants/app_images.dart';
 import 'package:food_delivery/cores/theme/app_colors.dart';
 import 'package:food_delivery/cores/utils/utils.dart';
@@ -18,49 +19,43 @@ class HomeBanner extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(16))),
       child: Row(
         mainAxisSize: MainAxisSize.max,
-        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Flexible(
-            flex: 1,
-            fit: FlexFit.tight,
+            // flex: 1,
+            // fit: FlexFit.tight,
             child: SizedBox(
-              width: w(200),
+              // width: w(200),/
               child: Stack(
-                // fit: StackFit.loose,
                 children: [
                   Image.asset(ImageAssets.iceCream2),
                   Image.asset(ImageAssets.iceCream),
                   Align(
                     alignment: Alignment.centerRight,
-                    child: Expanded(
+                    child: Container(
+                      padding: const EdgeInsets.only(right: 4),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
                             BannerText.InfoText,
-                            style: const TextStyle(fontSize: 20, color: Colors.white),
+                            style: const TextStyle(
+                                fontSize: 20, color: Colors.white),
                           ),
-                          ElevatedButton(
-                              onPressed: () {}, child: const Text('Buy Now'))
+                          vSpace(5),
+                       MidButton(onTap: (){},
+                       text: 'Buy Now',
+                       )
+                         
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
           ),
-
-          // Expanded(
-          //   child: Column(
-          //     children: [
-          //     Text(BannerText.InfoText),
-          //   xx
-          //   ]
-          //   ),
-          // )
         ],
       ),
     );
