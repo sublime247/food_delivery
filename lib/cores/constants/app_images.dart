@@ -6,6 +6,19 @@ abstract class ImageAssets {
   static const String payoneer = 'assets/icons/payoneer.svg';
   static const String paypal = 'assets/icons/paypal.svg';
   static const String visa = 'assets/icons/visa.svg';
+
+  // ResturantImages
+  static const String veganResto = 'assets/images/vegan_resto.png';
+  static const String smartResto = 'assets/images/smart_resto.png';
+  static const String healthyFood = 'assets/images/healthy_food.png';
+  static const String goodFood = 'assets/images/good_food.png';
+  static const String chefCity = 'assets/images/chef_city.png';
+  static const String chefCity2 = 'assets/images/chef2_city.png';
+
+//popular menus Images
+  static const String greenNoodles = 'assets/images/green_noodle.png';
+  static const String fruitSalad = 'assets/images/fruit_salad.png';
+  static const String pancake = 'assets/images/pancake.png';
 }
 
 abstract class IconAssets {
