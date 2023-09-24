@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "54374146513",
+    "project_id": "food-ninja-f9e68",
+    "storage_bucket": "food-ninja-f9e68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54374146513:android:1db013722a56c04480c0f0",
+        "android_client_info": {
+          "package_name": "com.example.food_delivery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWwlu_pgAlK6xdp3lZW4Ej6MFei9Fghvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
