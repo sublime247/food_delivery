@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/cores/constants/constants.dart';
 import 'package:food_delivery/cores/utils/utils.dart';
 
 class ButtonWidget extends StatelessWidget {
@@ -20,7 +21,7 @@ class ButtonWidget extends StatelessWidget {
         gradient: const LinearGradient(
           begin: Alignment(0.99, -0.15),
           end: Alignment(-0.99, 0.15),
-          colors: [Color(0xFF14BE77), Color(0xFF53E78B)],
+          colors: [Color(0xFF14BE77), kPrimaryColor],
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(sr(15)),
@@ -40,7 +41,13 @@ class ButtonWidget extends StatelessWidget {
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
         ),
-        child: child ?? Text(text ?? ''),
+        child: child ??
+            Text(text ?? '',
+                style: TextStyle(
+                  fontSize: sp(kfsMedium),
+                  fontFamily: bentonSansFont,
+                  fontWeight: FontWeight.w700,
+                )),
       ),
     );
   }

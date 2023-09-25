@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_delivery/cores/constants/constants.dart';
 import 'package:food_delivery/cores/navigator/navigator.dart';
 import 'package:food_delivery/cores/theme/theme.dart';
 
@@ -12,7 +13,6 @@ class FoodNinja extends ConsumerWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       builder: (context, Widget? child) {
-
         final route = ref.watch(routesProvider);
 
         return ValueListenableBuilder<ThemeMode>(
@@ -26,12 +26,12 @@ class FoodNinja extends ConsumerWidget {
               darkTheme: ThemeData(
                 extensions: <ThemeExtension<Palette>>{DarkPalette()},
                 scaffoldBackgroundColor: const Color(0xff0d0d0d),
-                fontFamily: "BentonSans",
+                fontFamily: bentonSansFont,
               ),
               theme: ThemeData(
                 extensions: <ThemeExtension<Palette>>{LightPalette()},
-                scaffoldBackgroundColor: const Color(0xFFFEFEFF),
-                fontFamily: "BentonSans",
+                scaffoldBackgroundColor: kColorWhite,
+                fontFamily: bentonSansFont,
               ),
             );
           },
