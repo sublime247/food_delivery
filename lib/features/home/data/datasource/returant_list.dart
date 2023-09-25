@@ -18,7 +18,7 @@ abstract class RestaurantListDataSource {
         resturantName: 'Good Food',
         time: '12 Mins'),
     const ResturantModel(
-        image: ImageAssets.veganResto,
+        image: ImageAssets.smartResto,
         resturantName: 'Smart Resto',
         time: '8 Mins'),
     const ResturantModel(

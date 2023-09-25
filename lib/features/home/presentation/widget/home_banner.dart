@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/cores/components/button.dart';
+import 'package:food_delivery/cores/components/components.dart';
 import 'package:food_delivery/cores/constants/app_images.dart';
 import 'package:food_delivery/cores/theme/app_colors.dart';
+import 'package:food_delivery/cores/theme/palette.dart';
 import 'package:food_delivery/cores/utils/utils.dart';
 import 'package:food_delivery/features/home/presentation/widget/banner_data.dart';
 
@@ -10,6 +12,7 @@ class HomeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // late final theme = Theme.of(context).extension<Palette>()!;
     return Container(
       height: h(150),
       width: w(350),
@@ -38,11 +41,10 @@ class HomeBanner extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Text(
+                          TextWidget(
                             BannerText.InfoText,
-                            style: const TextStyle(
-                                fontSize: 20, color: Colors.white),
-                          ),
+                                fontSize: 20, textColor: Colors.white,),
+                          
                           vSpace(5),
                        MidButton(onTap: (){},
                        text: 'Buy Now',

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/cores/theme/palette.dart';
 
 class SearchInputField extends StatelessWidget {
   const SearchInputField(
@@ -14,35 +15,38 @@ class SearchInputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    late final theme = Theme.of(context).extension<Palette>()!;
     return TextFormField(
       key: GlobalKey(debugLabel: 'kush'),
       controller: controller,
-      
+      style: TextStyle(
+        color: theme.mainTextColor,
+      ),
       keyboardType: inputType,
-      cursorColor:const Color(0xFFDA6317),
+      cursorColor:theme.iconColor,
       decoration: InputDecoration(
-        border: const OutlineInputBorder(
+        border: OutlineInputBorder(
           borderSide: BorderSide(
-            color:  Color(0xFFF9A84D)
+            color:  theme.borderColor
           ),
-          borderRadius: BorderRadius.all(Radius.circular(15))),
-        focusedBorder:const OutlineInputBorder(
+          borderRadius: const BorderRadius.all(Radius.circular(15))),
+        focusedBorder: OutlineInputBorder(
         borderSide: BorderSide(
-            color:  Color(0xFFF9A84D)
+            color:  theme.borderColor
           ),
-          borderRadius: BorderRadius.all(Radius.circular(15))),
-        enabledBorder:const OutlineInputBorder( borderSide: BorderSide(
-            color:  Color(0xFFF9A84D)
-          ),borderRadius: BorderRadius.all(Radius.circular(15))) ,
-        prefixIcon: const Icon(
+          borderRadius: const BorderRadius.all(Radius.circular(15))),
+        enabledBorder: OutlineInputBorder( borderSide: BorderSide(
+            color:  theme.borderColor
+          ),borderRadius: const BorderRadius.all(Radius.circular(15))) ,
+        prefixIcon:  Icon(
           Icons.search,
-          color: Color(0xFFDA6317),
+          color: theme.iconColor,
         ),
         filled: true,
-        fillColor:const Color(0xFFF9A84D) ,
+        fillColor: theme.textfieldColor,
         hintText: hintText,
-        hintStyle:  const TextStyle(
-          color: Color(0xFFDA6317),
+        hintStyle:   TextStyle(
+          color: theme.hintColor,
         ),
         labelText: labelText
       ),
