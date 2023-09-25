@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_delivery/cores/components/components.dart';
 import 'package:food_delivery/cores/constants/constants.dart';
 import 'package:food_delivery/cores/theme/theme.dart';
 import 'package:food_delivery/cores/utils/utils.dart';
 
-class OnboardScreen extends ConsumerStatefulWidget {
-  const OnboardScreen({super.key});
-
-  @override
-  ConsumerState<ConsumerStatefulWidget> createState() => _OnboardScreenState();
-}
-
-class _OnboardScreenState extends ConsumerState<OnboardScreen> {
+class BaseLayoutOnboarding extends StatelessWidget {
+  const BaseLayoutOnboarding({
+    super.key,
+    required this.text,
+    required this.subtext,
+    required this.onTap,
+    required this.iconUrl,
+  });
+  final String text;
+  final String subtext;
+  final VoidCallback onTap;
+  final String iconUrl;
   @override
   Widget build(BuildContext context) {
     late final theme = Theme.of(context).extension<Palette>()!;
@@ -20,10 +23,10 @@ class _OnboardScreenState extends ConsumerState<OnboardScreen> {
       body: Column(
         children: [
           vSpace(kXtremeLarge),
-          Image.asset(ImageAssets.onboardIllustration),
+          Image.asset(iconUrl),
           vSpace(kGlobalPadding),
           TextWidget(
-            'Find your Comfort\nFood here',
+           text,
             textAlign: TextAlign.center,
             textColor: theme.mainTextColor,
             fontFamily: bentonSansFont,
@@ -31,14 +34,14 @@ class _OnboardScreenState extends ConsumerState<OnboardScreen> {
           ),
           vSpace(kfsExtraLarge),
           TextWidget(
-            'Here you can find a chef or dish for every\ntaste and color. Enjoy!',
+           subtext,
             textAlign: TextAlign.center,
             textColor: theme.mainTextColor,
             fontSize: sp(kfsVeryTiny),
           ),
           vSpace(kXtremeLarge),
           ButtonWidget(
-            onTap: () {},
+            onTap: onTap,
             text: 'Next',
           )
         ],
