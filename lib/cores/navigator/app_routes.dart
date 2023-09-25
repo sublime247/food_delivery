@@ -1,5 +1,5 @@
 import 'package:food_delivery/cores/navigator/navigator.dart';
-import 'package:food_delivery/features/home/presentation/view/home_page.dart';
+// import 'package:food_delivery/features/home/presentation/view/home_page.dart';
 import 'package:food_delivery/features/onboarding/presentation/views/onboard_screen_1.dart';
 import 'package:food_delivery/features/onboarding/presentation/views/onboard_screen_2.dart';
 import 'package:food_delivery/features/splash/splash.dart';
