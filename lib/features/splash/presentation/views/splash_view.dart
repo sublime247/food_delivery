@@ -8,11 +8,6 @@ import 'package:food_delivery/cores/utils/utils.dart';
 import 'package:go_router/go_router.dart';
 
 class SplashView extends StatefulWidget {
-  static SplashView builder(
-    BuildContext context,
-    GoRouterState state,
-  ) =>
-      const SplashView();
   const SplashView({super.key});
 
   @override

@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:food_delivery/cores/navigator/navigator.dart';
 import 'package:go_router/go_router.dart';
 
-final navigationKey = GlobalKey<NavigatorState>();
+final GlobalKey<NavigatorState> navigationKey = GlobalKey<NavigatorState>();
 
 final routesProvider = Provider<GoRouter>(
   (ref) {
