@@ -14,4 +14,5 @@ abstract class IconAssets {
   static const String profileIcon = 'assets/icons/Profile.svg';
   static const String lockIcon = 'assets/icons/Lock.svg';
   static const String mailIcon = 'assets/icons/Message.svg';
+  static const String checkIcon = 'assets/icons/check.svg';
 }

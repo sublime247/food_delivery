@@ -1,5 +1,6 @@
 import 'package:food_delivery/cores/navigator/navigator.dart';
-import 'package:food_delivery/features/login/presentation/views/login_view.dart';
+import 'package:food_delivery/features/auth/presentation/views/login_view.dart';
+import 'package:food_delivery/features/auth/presentation/views/sign_up_view.dart';
 import 'package:food_delivery/features/onboarding/presentation/views/onboard_screen_1.dart';
 import 'package:food_delivery/features/onboarding/presentation/views/onboard_screen_2.dart';
 import 'package:food_delivery/features/splash/splash.dart';
@@ -29,6 +30,6 @@ final appRoutes = [
   GoRoute(
     path: RouteLocation.signUp,
     parentNavigatorKey: navigationKey,
-    builder: (context, state) => const SplashView(),
+    builder: (context, state) => const SignUpView(),
   ),
 ];

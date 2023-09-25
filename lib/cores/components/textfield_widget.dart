@@ -11,6 +11,7 @@ class TextFieldWidget extends StatelessWidget {
     this.fillColor,
     this.filled,
     this.hintText,
+    this.prefixIcon,
   }) : super(key: key);
 
   final TextEditingController? controller;
@@ -18,6 +19,7 @@ class TextFieldWidget extends StatelessWidget {
   final Color? fillColor;
   final bool? filled;
   final String? hintText;
+  final Widget? prefixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +39,7 @@ class TextFieldWidget extends StatelessWidget {
         filled: filled,
         enabledBorder: border,
         hintText: hintText,
+        prefixIcon: prefixIcon,
         hintStyle: const TextStyle(
           fontFamily: bentonSansFont,
           fontWeight: FontWeight.w400,
