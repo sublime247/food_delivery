@@ -9,6 +9,10 @@ class NavigationHelper {
   final BuildContext? context = navigationKey.currentContext;
 
   Future<dynamic> navigateTo(String routeName, {Object? arguments}) async {
-    return context?.go(routeName);
+    return context?.push(routeName);
+  }
+
+  void goBack([dynamic result]) async {
+    return context?.pop(result);
   }
 }

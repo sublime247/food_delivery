@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/cores/components/components.dart';
 import 'package:food_delivery/cores/constants/constants.dart';
-import 'package:food_delivery/cores/navigator/navigation_helper.dart';
-import 'package:food_delivery/cores/navigator/route_location.dart';
+import 'package:food_delivery/cores/navigator/navigator.dart';
 import 'package:food_delivery/cores/theme/theme.dart';
 import 'package:food_delivery/cores/utils/utils.dart';
 
 class AuthBaseLayout extends StatelessWidget {
-  const AuthBaseLayout({super.key, required this.isSignUp});
+  AuthBaseLayout({super.key, required this.isSignUp});
   final bool isSignUp;
+  final theme = Theme.of(navigationKey.currentContext!).extension<Palette>();
+
   @override
   Widget build(BuildContext context) {
-    late final theme = Theme.of(context).extension<Palette>()!;
     return ScaffoldWidget(
       useSingleScroll: true,
       body: Column(
@@ -23,26 +23,26 @@ class AuthBaseLayout extends StatelessWidget {
               true => 'Sign Up For Free',
               false => 'Login To Your Account',
             },
-            textColor: theme.mainTextColor,
+            textColor: theme?.mainTextColor,
             fontSize: sp(kfsExtraLarge),
             fontWeight: FontWeight.w700,
             fontFamily: bentonSansFont,
           ),
           vSpace(kGlobalPadding),
           if (!isSignUp) ...[
-            const TextFieldWidget(
+            TextFieldWidget(
               filled: true,
               hintText: 'Email',
             ),
             vSpace(kfsVeryTiny),
-            const TextFieldWidget(
+            TextFieldWidget(
               filled: true,
               hintText: 'Password',
             ),
             vSpace(kfsExtraLarge),
             TextWidget(
               'Or Continue With',
-              textColor: theme.mainTextColor,
+              textColor: theme?.mainTextColor,
               fontSize: sp(kfsVeryTiny),
               fontFamily: bentonSansFont,
               fontWeight: FontWeight.w500,
@@ -69,7 +69,7 @@ class AuthBaseLayout extends StatelessWidget {
             TextWidget(
               'Forgot Your Password?',
               fontFamily: bentonSansFont,
-              textColor: theme.primaryColor,
+              textColor: theme?.primaryColor,
               fontSize: sp(kfsTiny),
               fontWeight: FontWeight.w500,
               decoration: TextDecoration.underline,
@@ -77,16 +77,19 @@ class AuthBaseLayout extends StatelessWidget {
           ],
           if (isSignUp) ...[
             TextFieldWidget(
+              filled: true,
               prefixIcon: IconAssets.profileIcon.svg,
               hintText: 'John Doe',
             ),
             vSpace(kfsVeryTiny),
             TextFieldWidget(
+              filled: true,
               prefixIcon: IconAssets.mailIcon.svg,
               hintText: 'Email',
             ),
             vSpace(kfsVeryTiny),
             TextFieldWidget(
+              filled: true,
               prefixIcon: IconAssets.lockIcon.svg,
               hintText: 'Password',
             ),
@@ -95,7 +98,8 @@ class AuthBaseLayout extends StatelessWidget {
           vSpace(kGlobalPadding),
           ButtonWidget(
             onTap: switch (isSignUp) {
-              true => () {},
+              true => () =>
+                  NavigationHelper.instance.navigateTo(RouteLocation.inputBio),
               false => () =>
                   NavigationHelper.instance.navigateTo(RouteLocation.signUp),
             },
@@ -109,7 +113,7 @@ class AuthBaseLayout extends StatelessWidget {
             TextWidget(
               'Already have an account?',
               fontFamily: bentonSansFont,
-              textColor: theme.primaryColor,
+              textColor: theme?.primaryColor,
               fontSize: sp(kfsTiny),
               fontWeight: FontWeight.w500,
               decoration: TextDecoration.underline,
@@ -128,15 +132,21 @@ class AuthBaseLayout extends StatelessWidget {
           vertical: h(kfsMedium),
         ),
         decoration: BoxDecoration(
-          color: kColorWhite,
+          color: theme?.tileColor,
           borderRadius: BorderRadius.circular(kfsTiny),
-          border: Border.all(color: borderColor),
+          border: Border.all(color: theme!.borderColor),
         ),
         child: Row(
           children: [
             icon.svg,
             hSpace(kfsTiny),
-            TextWidget(text),
+            TextWidget(
+              text,
+              textColor: theme?.mainTextColor,
+              fontSize: sp(kfsVeryTiny),
+              fontFamily: bentonSansFont,
+              fontWeight: FontWeight.w500,
+            ),
           ],
         ),
       ),

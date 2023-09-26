@@ -9,4 +9,6 @@ class RouteLocation {
   static String get onboard2 => '/onboard2';
   static String get login => '/login';
   static String get signUp => '/signUp';
+  static String get inputBio => '/input-bio';
+  static String get paymentMethodView => '/payment-method-view';
 }

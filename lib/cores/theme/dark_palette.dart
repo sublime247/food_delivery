@@ -12,6 +12,10 @@ class DarkPalette implements Palette {
   @override
   Color get textFieldTextColor => kColorWhite;
   @override
+  Color get tileColor => kTileColor;
+  @override
+  Color get borderColor => kTileColor;
+  @override
   ThemeExtension<Palette> copyWith() {
     return this;
   }

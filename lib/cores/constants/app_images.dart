@@ -15,4 +15,8 @@ abstract class IconAssets {
   static const String lockIcon = 'assets/icons/Lock.svg';
   static const String mailIcon = 'assets/icons/Message.svg';
   static const String checkIcon = 'assets/icons/check.svg';
+  static const String paypalIcon = 'assets/icons/paypal.svg';
+  static const String visaIcon = 'assets/icons/visa.svg';
+  static const String paypalIconW = 'assets/icons/paypal_w.svg';
+  static const String visaIconW = 'assets/icons/visa_w.svg';
 }

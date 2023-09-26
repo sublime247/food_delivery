@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/cores/constants/app_images.dart';
-import 'package:food_delivery/cores/navigator/navigation_helper.dart';
 import 'package:food_delivery/cores/navigator/navigator.dart';
 import 'package:food_delivery/features/onboarding/presentation/widgets/base_layout_onboarding.dart';
 

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/cores/constants/constants.dart';
+import 'package:food_delivery/cores/navigator/route_provider.dart';
 import 'package:food_delivery/cores/theme/theme.dart';
 import 'package:food_delivery/cores/utils/utils.dart';
 
+@immutable
 class TextFieldWidget extends StatelessWidget {
-  const TextFieldWidget({
+  TextFieldWidget({
     Key? key,
     this.controller,
     this.keyboardType,
@@ -13,6 +15,8 @@ class TextFieldWidget extends StatelessWidget {
     this.hintText,
     this.prefixIcon,
   }) : super(key: key);
+
+  final theme = Theme.of(navigationKey.currentContext!).extension<Palette>();
 
   final TextEditingController? controller;
   final TextInputType? keyboardType;
@@ -35,14 +39,15 @@ class TextFieldWidget extends StatelessWidget {
         color: theme.textFieldTextColor,
       ),
       decoration: InputDecoration(
-        fillColor: fillColor ?? kColorWhite,
+        fillColor: fillColor ?? theme.tileColor,
         filled: filled,
         enabledBorder: border,
         hintText: hintText,
         prefixIcon: prefixIcon,
-        hintStyle: const TextStyle(
+        hintStyle: TextStyle(
           fontFamily: bentonSansFont,
           fontWeight: FontWeight.w400,
+          color: theme.mainTextColor,
         ),
         focusedBorder: focusedBorder,
       ),
@@ -51,10 +56,10 @@ class TextFieldWidget extends StatelessWidget {
 
   InputBorder get border => OutlineInputBorder(
         borderRadius: BorderRadius.circular(kfsTiny),
-        borderSide: const BorderSide(color: borderColor),
+        borderSide: BorderSide(color: theme!.borderColor),
       );
   InputBorder get focusedBorder => OutlineInputBorder(
         borderRadius: BorderRadius.circular(kfsTiny),
-        borderSide: const BorderSide(color: kPrimaryColor),
+        borderSide: BorderSide(color: theme!.primaryColor),
       );
 }

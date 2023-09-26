@@ -4,6 +4,8 @@ import 'package:food_delivery/features/auth/presentation/views/sign_up_view.dart
 import 'package:food_delivery/features/onboarding/presentation/views/onboard_screen_1.dart';
 import 'package:food_delivery/features/onboarding/presentation/views/onboard_screen_2.dart';
 import 'package:food_delivery/features/splash/splash.dart';
+import 'package:food_delivery/features/user_input/presentation/views/input_bio_view.dart';
+import 'package:food_delivery/features/user_input/presentation/views/payment_method_input_view.dart';
 import 'package:go_router/go_router.dart';
 
 final appRoutes = [
@@ -32,4 +34,15 @@ final appRoutes = [
     parentNavigatorKey: navigationKey,
     builder: (context, state) => const SignUpView(),
   ),
+    GoRoute(
+    path: RouteLocation.inputBio,
+    parentNavigatorKey: navigationKey,
+    builder: (context, state) => const InputBioView(),
+  ),
+   GoRoute(
+    path: RouteLocation.paymentMethodView,
+    parentNavigatorKey: navigationKey,
+    builder: (context, state) =>  PaymentMethodView(),
+  ),
+  
 ];
