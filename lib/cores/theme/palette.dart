@@ -6,4 +6,6 @@ abstract class Palette extends ThemeExtension<Palette> {
   Color get textColor1;
   Color get textFieldTextColor;
   Color get tileColor;
-  Color get borderColor;}
+  Color get borderColor;
+  Color get tileColorShade;
+}

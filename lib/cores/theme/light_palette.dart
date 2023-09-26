@@ -3,8 +3,6 @@ import 'package:food_delivery/cores/constants/constants.dart';
 import 'package:food_delivery/cores/theme/palette.dart';
 
 class LightPalette implements Palette {
-
-  
   @override
   Color get mainTextColor => kMainTextColorL;
   @override
@@ -17,8 +15,8 @@ class LightPalette implements Palette {
   Color get tileColor => kColorWhite;
   @override
   Color get borderColor => kBorderColor;
-
-
+  @override
+  Color get tileColorShade => kTileColorShadeL;
 
   @override
   ThemeExtension<Palette> copyWith() {
@@ -35,6 +33,4 @@ class LightPalette implements Palette {
 
   @override
   Object get type => Palette;
-  
-
 }

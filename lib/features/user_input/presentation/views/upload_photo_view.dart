@@ -67,7 +67,8 @@ class UploadPhotoView extends StatelessWidget {
                   ),
                 ],
               ),
-              onTap: () {},
+              onTap: () => NavigationHelper.instance
+                  .navigateTo(RouteLocation.setYourLocation),
             ),
           ],
         ),

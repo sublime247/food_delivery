@@ -13,7 +13,7 @@ class OnboardScreen2 extends StatelessWidget {
       text: 'Food Ninja is Where Your\nComfort Lives',
       subtext: 'Enjoy a fast and smooth food delivery at\nyour doorstep',
       onTap: () => context.go(RouteLocation.login),
-      iconUrl: ImageAssets.onboardIllustration,
+      iconUrl: ImageAssets.onboardIllustration2,
     );
   }
 }

@@ -21,4 +21,6 @@ abstract class IconAssets {
   static const String visaIconW = 'assets/icons/visa_w.svg';
   static const String galleryIcon = 'assets/icons/gallery.svg';
   static const String cameraIcon = 'assets/icons/camera.svg';
+  static const String locationIcon = 'assets/icons/location.svg';
+  static const String successIcon = 'assets/icons/success.svg';
 }

@@ -12,4 +12,7 @@ class RouteLocation {
   static String get inputBio => '/input-bio';
   static String get paymentMethodView => '/payment-method-view';
   static String get uploadPhotoView => '/upload-photo-view';
+  static String get previewImage => '/preview_image';
+  static String get setYourLocation => '/set-your-location';
+  static String get successfulView => '/successful-view';
 }

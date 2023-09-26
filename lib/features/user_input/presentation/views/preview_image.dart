@@ -5,8 +5,8 @@ import 'package:food_delivery/cores/navigator/navigator.dart';
 import 'package:food_delivery/cores/utils/utils.dart';
 import 'package:food_delivery/features/user_input/presentation/widgets/header_widget.dart';
 
-class InputBioView extends StatelessWidget {
-  const InputBioView({super.key});
+class PreviewImage extends StatelessWidget {
+  const PreviewImage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,29 +25,16 @@ class InputBioView extends StatelessWidget {
             ),
             vSpace(kfsLarge),
             HeaderWidget(
-              title: 'Fill in your bio to get\nstarted',
+              title: 'Preview Your Photo\nProfile',
               subtitle:
                   'This data will be displayed in your account\nprofile for security',
             ),
             vSpace(kXtremeLarge),
-            TextFieldWidget(
-              filled: true,
-              hintText: 'First name',
-            ),
-            vSpace(kfsExtraLarge),
-            TextFieldWidget(
-              filled: true,
-              hintText: 'Last name',
-            ),
-            vSpace(kfsExtraLarge),
-            TextFieldWidget(
-              filled: true,
-              hintText: 'Mobile number',
-            ),
+            //!TODO: IMAGE PREVIEW
             vSpace(spacer),
             ButtonWidget(
               onTap: () => NavigationHelper.instance
-                  .navigateTo(RouteLocation.paymentMethodView),
+                  .navigateTo(RouteLocation.uploadPhotoView),
               text: 'Next',
             ),
           ],

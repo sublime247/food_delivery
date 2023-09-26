@@ -41,7 +41,7 @@ class PaymentMethodView extends StatelessWidget {
               icon: IconAssets.visaIcon,
               icon2: IconAssets.visaIconW,
             ),
-            vSpace(150),
+            vSpace(spacer),
             ButtonWidget(
               onTap: () => NavigationHelper.instance
                   .navigateTo(RouteLocation.uploadPhotoView),
@@ -63,6 +63,7 @@ class PaymentMethodView extends StatelessWidget {
       builder: (context, val, _) {
         return CustomContainer(
           onTap: () {},
+          height: h(70),
           child: Center(
             child: switch (val) {
               ThemeMode.dark => icon2.svg,

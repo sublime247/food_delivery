@@ -9,3 +9,5 @@ const Color kBorderColor = Color(0xFFF4F4F4);
 const Color backButtonBgColor = Color(0xFFF9A84D);
 const Color kTileColor = Color(0xff252525);
 const Color backButtonColor = Color(0xffDA6317);
+const Color kTileColorShadeL = Color(0xFFF6F6F6);
+const Color kTileColorShadeD = Color(0xff3b3b3b);
