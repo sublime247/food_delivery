@@ -16,7 +16,7 @@ final appRoutes = [
   GoRoute(
     path: RouteLocation.home,
     parentNavigatorKey: navigationKey,
-    builder: (context, state) => const SplashView(),
+    builder: (context, state) =>  SplashView(),
   ),
   GoRoute(
     path: RouteLocation.onboard1,
@@ -26,7 +26,7 @@ final appRoutes = [
   GoRoute(
     path: RouteLocation.onboard2,
     parentNavigatorKey: navigationKey,
-    builder: (context, state) => const OnboardScreen2(),
+    builder: (context, state) => const OnboardScreen2(),    
   ),
   GoRoute(
     path: RouteLocation.login,
