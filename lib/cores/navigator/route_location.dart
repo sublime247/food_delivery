@@ -8,5 +8,11 @@ class RouteLocation {
   static String get onboard1 => '/onboard1';
   static String get onboard2 => '/onboard2';
   static String get login => '/login';
-  static String get signup => '/signup';
+  static String get signUp => '/signUp';
+  static String get inputBio => '/input-bio';
+  static String get paymentMethodView => '/payment-method-view';
+  static String get uploadPhotoView => '/upload-photo-view';
+  static String get previewImage => '/preview_image';
+  static String get setYourLocation => '/set-your-location';
+  static String get successfulView => '/successful-view';
 }

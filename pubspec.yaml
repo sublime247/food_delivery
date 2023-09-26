@@ -23,6 +23,7 @@ dependencies:
   flutter_riverpod: ^2.4.0
   fpdart: ^1.1.0
   equatable: ^2.0.5
+  flutter_svg: ^2.0.7
 
 dev_dependencies:
   flutter_test:
@@ -52,8 +53,6 @@ flutter:
     - assets/icons/
     - assets/
    
-
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -69,6 +68,16 @@ flutter:
     - family: BentonSans
       fonts:
         - asset: assets/fonts/BentonSans-Bold.otf
+          weight: 700
+        - asset: assets/fonts/BentonSans-Regular.otf
+          weight: 400
+        - asset: assets/fonts/BentonSans-Book.otf
+          weight: 300
+        - asset: assets/fonts/BentonSans-Medium.otf
+          weight: 500
+    - family: Viga
+      fonts:
+        - asset: assets/fonts/Viga-Regular.otf    
   
  
   

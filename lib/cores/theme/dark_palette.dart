@@ -1,9 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/cores/theme/pallette.dart';
+import 'package:food_delivery/cores/constants/constants.dart';
+import 'package:food_delivery/cores/theme/palette.dart';
 
 class DarkPalette implements Palette {
+
   @override
-  Color get mainTextColor => const Color(0xffffffff);
+  Color get mainTextColor => kColorWhite;
+  @override
+  Color get primaryColor => kPrimaryColor;
+  @override
+  Color get textColor1 => kColorWhite;
+  @override
+  Color get textFieldTextColor => kColorWhite;
+  @override
+  Color get tileColor => kTileColor;
+  @override
+  Color get borderColor => kTileColor;
+  @override
+  Color get tileColorShade => kTileColorShadeD;
+
 
   @override
   ThemeExtension<Palette> copyWith() {
