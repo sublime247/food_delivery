@@ -6,6 +6,7 @@ import 'package:food_delivery/features/onboarding/presentation/views/onboard_scr
 import 'package:food_delivery/features/splash/splash.dart';
 import 'package:food_delivery/features/user_input/presentation/views/input_bio_view.dart';
 import 'package:food_delivery/features/user_input/presentation/views/payment_method_input_view.dart';
+import 'package:food_delivery/features/user_input/presentation/views/upload_photo_view.dart';
 import 'package:go_router/go_router.dart';
 
 final appRoutes = [
@@ -34,15 +35,19 @@ final appRoutes = [
     parentNavigatorKey: navigationKey,
     builder: (context, state) => const SignUpView(),
   ),
-    GoRoute(
+  GoRoute(
     path: RouteLocation.inputBio,
     parentNavigatorKey: navigationKey,
     builder: (context, state) => const InputBioView(),
   ),
-   GoRoute(
+  GoRoute(
     path: RouteLocation.paymentMethodView,
     parentNavigatorKey: navigationKey,
-    builder: (context, state) =>  PaymentMethodView(),
+    builder: (context, state) => PaymentMethodView(),
   ),
-  
+  GoRoute(
+    path: RouteLocation.uploadPhotoView,
+    parentNavigatorKey: navigationKey,
+    builder: (context, state) => const UploadPhotoView(),
+  ),
 ];

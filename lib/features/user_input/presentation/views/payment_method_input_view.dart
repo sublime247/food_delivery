@@ -4,6 +4,7 @@ import 'package:food_delivery/cores/constants/constants.dart';
 import 'package:food_delivery/cores/navigator/navigator.dart';
 import 'package:food_delivery/cores/theme/theme.dart';
 import 'package:food_delivery/cores/utils/utils.dart';
+import 'package:food_delivery/features/user_input/presentation/widgets/header_widget.dart';
 
 class PaymentMethodView extends StatelessWidget {
   PaymentMethodView({super.key});
@@ -24,21 +25,11 @@ class PaymentMethodView extends StatelessWidget {
             BackButtonWidget(
               onTap: () => NavigationHelper.instance.goBack(),
             ),
-            vSpace(kfsMedium),
-            TextWidget(
-              'Payment Method',
-              fontFamily: bentonSansFont,
-              fontWeight: FontWeight.w700,
-              fontSize: kfsSuperLarge,
-              textColor: theme?.mainTextColor,
-            ),
             vSpace(kfsLarge),
-            TextWidget(
-              'This data will be displayed in your account\nprofile for security',
-              fontFamily: bentonSansFont,
-              fontWeight: FontWeight.w300,
-              fontSize: kfsTiny,
-              textColor: theme?.mainTextColor,
+            HeaderWidget(
+              title: 'Payment Method',
+              subtitle:
+                  'This data will be displayed in your account\nprofile for security',
             ),
             vSpace(kXtremeLarge),
             _buildContainer(
@@ -53,7 +44,7 @@ class PaymentMethodView extends StatelessWidget {
             vSpace(150),
             ButtonWidget(
               onTap: () => NavigationHelper.instance
-                  .navigateTo(RouteLocation.paymentMethodView),
+                  .navigateTo(RouteLocation.uploadPhotoView),
               text: 'Next',
             ),
           ],
@@ -70,23 +61,14 @@ class PaymentMethodView extends StatelessWidget {
     return ValueListenableBuilder<ThemeMode>(
       valueListenable: ThemeModeSelector.mode,
       builder: (context, val, _) {
-        return Container(
-          height: h(70),
-          padding: EdgeInsets.symmetric(vertical: h(22)),
-          decoration: BoxDecoration(
-            border: Border.all(width: 1, color: theme!.borderColor),
-            color: theme?.tileColor,
-            borderRadius: BorderRadius.circular(kfsMedium),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              switch (val) {
-                ThemeMode.dark => icon2.svg,
-                ThemeMode.light => icon.svg,
-                _ => icon.svg,
-              },
-            ],
+        return CustomContainer(
+          onTap: () {},
+          child: Center(
+            child: switch (val) {
+              ThemeMode.dark => icon2.svg,
+              ThemeMode.light => icon.svg,
+              _ => icon.svg,
+            },
           ),
         );
       },

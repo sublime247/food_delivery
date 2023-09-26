@@ -11,4 +11,5 @@ class RouteLocation {
   static String get signUp => '/signUp';
   static String get inputBio => '/input-bio';
   static String get paymentMethodView => '/payment-method-view';
+  static String get uploadPhotoView => '/upload-photo-view';
 }

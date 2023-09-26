@@ -19,4 +19,6 @@ abstract class IconAssets {
   static const String visaIcon = 'assets/icons/visa.svg';
   static const String paypalIconW = 'assets/icons/paypal_w.svg';
   static const String visaIconW = 'assets/icons/visa_w.svg';
+  static const String galleryIcon = 'assets/icons/gallery.svg';
+  static const String cameraIcon = 'assets/icons/camera.svg';
 }
