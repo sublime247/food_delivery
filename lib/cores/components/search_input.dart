@@ -16,39 +16,42 @@ class SearchInputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     late final theme = Theme.of(context).extension<Palette>()!;
-    return TextFormField(
-      key: GlobalKey(debugLabel: 'kush'),
-      controller: controller,
-      style: TextStyle(
-        color: theme.mainTextColor,
-      ),
-      keyboardType: inputType,
-      cursorColor:theme.iconColor,
-      decoration: InputDecoration(
-        border: OutlineInputBorder(
+    return SizedBox(
+      width: MediaQuery.of(context).size.width * 0.7,
+      child: TextFormField(
+        key: GlobalKey(debugLabel: 'kush'),
+        controller: controller,
+        style: TextStyle(
+          color: theme.mainTextColor,
+        ),
+        keyboardType: inputType,
+        cursorColor:theme.iconColor,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderSide: BorderSide(
+              color:  theme.borderColor
+            ),
+            borderRadius: const BorderRadius.all(Radius.circular(15))),
+          focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color:  theme.borderColor
+              color:  theme.borderColor
+            ),
+            borderRadius: const BorderRadius.all(Radius.circular(15))),
+          enabledBorder: OutlineInputBorder( borderSide: BorderSide(
+              color:  theme.borderColor
+            ),borderRadius: const BorderRadius.all(Radius.circular(15))) ,
+          prefixIcon:  Icon(
+            Icons.search,
+            color: theme.iconColor,
           ),
-          borderRadius: const BorderRadius.all(Radius.circular(15))),
-        focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-            color:  theme.borderColor
+          filled: true,
+          fillColor: theme.textfieldColor,
+          hintText: hintText,
+          hintStyle:   TextStyle(
+            color: theme.hintColor,
           ),
-          borderRadius: const BorderRadius.all(Radius.circular(15))),
-        enabledBorder: OutlineInputBorder( borderSide: BorderSide(
-            color:  theme.borderColor
-          ),borderRadius: const BorderRadius.all(Radius.circular(15))) ,
-        prefixIcon:  Icon(
-          Icons.search,
-          color: theme.iconColor,
+          labelText: labelText
         ),
-        filled: true,
-        fillColor: theme.textfieldColor,
-        hintText: hintText,
-        hintStyle:   TextStyle(
-          color: theme.hintColor,
-        ),
-        labelText: labelText
       ),
     );
   }

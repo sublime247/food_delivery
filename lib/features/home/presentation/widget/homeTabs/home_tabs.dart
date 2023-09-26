@@ -4,7 +4,7 @@ import 'package:food_delivery/features/home/presentation/widget/homeTabs/home.da
 abstract class HomeTabs {
   static List<Widget> homeWidget = [
     HomeTab(),
-    Scaffold(),
+   const  Scaffold(),
     Scaffold(),
     Scaffold(),
 

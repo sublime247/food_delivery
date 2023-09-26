@@ -8,16 +8,18 @@ class ButtonWidget extends StatelessWidget {
     super.key,
     this.text,
     this.child,
+    this.width,
     required this.onTap,
   });
   final String? text;
   final Widget? child;
+  final double? width;
   final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: w(160),
-      height: h(50),
+      width: width ?? w(160),
+      height:  h(50),
       decoration: ShapeDecoration(
         gradient: const LinearGradient(
           begin: Alignment(0.99, -0.15),

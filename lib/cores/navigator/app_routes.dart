@@ -1,4 +1,6 @@
 import 'package:food_delivery/cores/navigator/navigator.dart';
+import 'package:food_delivery/features/home/presentation/view/home_page.dart';
+import 'package:food_delivery/features/home/presentation/widget/home_with_chips.dart';
 // import 'package:food_delivery/features/home/presentation/view/home_page.dart';
 import 'package:food_delivery/features/onboarding/presentation/views/onboard_screen_1.dart';
 import 'package:food_delivery/features/onboarding/presentation/views/onboard_screen_2.dart';
@@ -9,7 +11,7 @@ final appRoutes = [
   GoRoute(
     path: RouteLocation.home,
     parentNavigatorKey: navigationKey,
-    builder: (context, state) => const SplashView(),
+    builder: (context, state) => const HomePage(),
   ),
   GoRoute(
     path: RouteLocation.onboard1,
@@ -21,10 +23,11 @@ final appRoutes = [
     parentNavigatorKey: navigationKey,
     builder: (context, state) => const OnboardScreen2(),
   ),
+  
   GoRoute(
-    path: RouteLocation.login,
+    path: RouteLocation.homechip,
     parentNavigatorKey: navigationKey,
-    builder: (context, state) => const SplashView(),
+    builder: (context, state) => const HomeActionChips(),
   ),
   GoRoute(
     path: RouteLocation.signUp,

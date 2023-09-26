@@ -14,7 +14,7 @@ class OnboardScreen1 extends StatelessWidget {
       subtext:
           'Here you can find a chef or dish for every\ntaste and color. Enjoy!',
       onTap: () => NavigationHelper.instance.navigateTo(RouteLocation.onboard2),
-      iconUrl: ImageAssets.onboardIllustration,
+      iconUrl: ImageAssets.onboardIllustration2,
     );
   }
 }
