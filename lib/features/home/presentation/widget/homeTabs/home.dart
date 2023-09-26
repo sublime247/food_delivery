@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:food_delivery/cores/components/components.dart';
-import 'package:food_delivery/cores/components/search_input.dart';
-import 'package:food_delivery/cores/components/text_widget.dart';
-import 'package:food_delivery/cores/constants/font_size.dart';
-import 'package:food_delivery/cores/theme/palette.dart';
 import 'package:food_delivery/cores/utils/utils.dart';
 import 'package:food_delivery/features/home/presentation/widget/custom_home.dart';
 import 'package:food_delivery/features/home/presentation/widget/home_banner.dart';
@@ -27,12 +22,12 @@ final TextEditingController controller = TextEditingController();
           child: Column( 
       
             children:[
-              CustomHome(),
+              CustomHome(true),
                   vSpace(30),
                  const  HomeBanner(),
                  vSpace(30),
                  const  ResturantList(),
-                  vSpace(30),
+                  // vSpace(0),
                  const  PopularMenusList(),
                 
               

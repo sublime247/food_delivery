@@ -15,38 +15,43 @@ class ResturantList extends ConsumerWidget {
     final showAllresturant = ref.watch(toggleStateProvider);
     late final theme = Theme.of(context).extension<Palette>()!;
     return SizedBox(
-      height:showAllresturant.showAllResturant? MediaQuery.sizeOf(context).height/1.5 : 220,
+//  showAllresturant.showAllResturant? MediaQuery.sizeOf(context).height : 400),
+      height: showAllresturant.showAllResturant
+          ? MediaQuery.sizeOf(context).height / 1.2
+          : 250,
       child: ListView(
         physics: const NeverScrollableScrollPhysics(),
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-             TextWidget('Resturant', fontSize: kfsLarge, fontWeight: FontWeight.w600, textColor: theme.mainTextColor ),
+              TextWidget('Resturant',
+                  fontSize: kfsLarge,
+                  fontWeight: FontWeight.w600,
+                  textColor: theme.mainTextColor),
               TextButton(
                 onPressed: () {
                   ref.read(toggleStateProvider.notifier).toggle();
                 },
-                child: TextWidget(showAllresturant.showAllResturant
-                    ? 'View Less'
-                    : 'View More',textColor: theme.textButton,),
+                child: TextWidget(
+                  showAllresturant.showAllResturant ? 'View Less' : 'View More',
+                  textColor: theme.textButton,
+                ),
               )
             ],
           ),
           SizedBox(
             height: MediaQuery.sizeOf(context).height,
             child: GridView.builder(
-              physics: showAllresturant.showAllResturant
-                    ?const AlwaysScrollableScrollPhysics()
-                    :const NeverScrollableScrollPhysics(),
+                physics: showAllresturant.showAllResturant
+                    ? const NeverScrollableScrollPhysics()
+                    : const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     mainAxisSpacing: 30,
-                    crossAxisSpacing: 30
-                    
-                    ),
+                    crossAxisSpacing: 30,
+                    childAspectRatio: 0.8),
                 itemCount: showAllresturant.showAllResturant
                     ? RestaurantListDataSource.resturantLists.length
                     : 2,
@@ -59,27 +64,31 @@ class ResturantList extends ConsumerWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         color: theme.cardColor,
-                        ),
+                      ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image.asset(
-                            RestaurantListDataSource.resturantLists[index].image,
+                            RestaurantListDataSource
+                                .resturantLists[index].image,
                             height: h(73),
                             width: w(96),
                           ),
-                          vSpace(3),
-                          TextWidget(RestaurantListDataSource
-                              .resturantLists[index].resturantName,
-                              fontSize: kfsMedium, fontWeight: FontWeight.w600, textColor: theme.mainTextColor,),
-                          vSpace(3),
+                          vSpace(8),
                           TextWidget(
-                              RestaurantListDataSource.resturantLists[index].time,
-                              fontSize: kfsTiny, textColor: theme.mainTextColor,),
-                        
+                            RestaurantListDataSource
+                                .resturantLists[index].resturantName,
+                            fontSize: kfsMedium,
+                            fontWeight: FontWeight.w600,
+                            textColor: theme.mainTextColor,
+                          ),
+                          vSpace(8),
+                          TextWidget(
+                            RestaurantListDataSource.resturantLists[index].time,
+                            fontSize: kfsTiny,
+                            textColor: theme.mainTextColor,
+                          ),
                         ],
-                      
-                       
                       ),
                     ),
                   );

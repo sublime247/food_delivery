@@ -7,17 +7,21 @@ class SearchInputField extends StatelessWidget {
       required this.controller,
       required this.hintText,
       this.inputType = TextInputType.text,
-       this.labelText});
+       this.labelText,
+       this.width,
+       });
   final TextEditingController controller;
   final String hintText;
   final TextInputType inputType;
   final String? labelText;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
     late final theme = Theme.of(context).extension<Palette>()!;
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.7,
+      width: width??MediaQuery.of(context).size.width * 0.7,
+      
       child: TextFormField(
         key: GlobalKey(debugLabel: 'kush'),
         controller: controller,

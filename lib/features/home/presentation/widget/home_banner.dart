@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/cores/components/button.dart';
 import 'package:food_delivery/cores/components/components.dart';
 import 'package:food_delivery/cores/constants/app_images.dart';
 import 'package:food_delivery/cores/theme/app_colors.dart';
-import 'package:food_delivery/cores/theme/palette.dart';
 import 'package:food_delivery/cores/utils/utils.dart';
 import 'package:food_delivery/features/home/presentation/widget/banner_data.dart';
 

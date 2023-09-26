@@ -5,8 +5,8 @@ abstract class HomeTabs {
   static List<Widget> homeWidget = [
     HomeTab(),
    const  Scaffold(),
-    Scaffold(),
-    Scaffold(),
+   const  Scaffold(),
+   const  Scaffold(),
 
   ];
 }

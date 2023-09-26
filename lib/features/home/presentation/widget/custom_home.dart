@@ -9,9 +9,9 @@ import 'package:food_delivery/cores/theme/palette.dart';
 import 'package:food_delivery/cores/utils/responsive_sizes.dart';
 
 class CustomHome extends ConsumerWidget {
-  CustomHome({super.key});
+  CustomHome(this.isHome, {super.key});
   final TextEditingController controller = TextEditingController();
-  final bool isHome = true;
+  final bool isHome;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     late final theme = Theme.of(context).extension<Palette>()!;
@@ -32,23 +32,27 @@ class CustomHome extends ConsumerWidget {
       ),
       vSpace(15),
       Row(
+        // mainAxisAlignment: MainAxisAlignment.v,
         children: [
           SearchInputField(
+            
             controller: controller,
             hintText: 'What do you want to order?',
           ),
           hSpace(10),
-          Expanded(
-            child: IconButton(
-                iconSize: 40,
-                onPressed: () {
-                  NavigationHelper.instance.navigateTo(RouteLocation.homechip);
-                },
-                icon: Icon(
-                  Icons.filter_list_outlined,
-                  color: theme.textfieldColor,
-                )),
-          )
+          if (isHome == true)
+            Expanded(
+              child: IconButton(
+                  iconSize: 40,
+                  onPressed: () {
+                    NavigationHelper.instance
+                        .navigateTo(RouteLocation.homechip);
+                  },
+                  icon: Icon(
+                    Icons.filter_list_outlined,
+                    color: theme.textfieldColor,
+                  )),
+            )
         ],
       )
     ]);

@@ -27,7 +27,7 @@ class HomeActionChips extends ConsumerWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CustomHome(),
+                  CustomHome(false),
                   vSpace(30),
                   _buildContext(context, 'Resturant', () {}, 'Type'),
                   vSpace(30),
